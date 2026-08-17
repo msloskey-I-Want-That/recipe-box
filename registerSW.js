@@ -1,1 +1,0 @@
-if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/recipe-box/sw.js', { scope: '/recipe-box/' })})}
