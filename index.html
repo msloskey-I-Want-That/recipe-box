@@ -3,11 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#8b6bb8" />
+  <meta name="theme-color" content="#100E26" />
   <title>Recipe Box</title>
   <link rel="manifest" href="manifest.webmanifest" />
-  <script type="module" crossorigin src="/recipe-box/assets/index-CE2Wnizi.js"></script>
-  <link rel="stylesheet" crossorigin href="/recipe-box/assets/index-CgOalf0o.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    // Set the theme before first paint (same pattern as Health Tracker) so
+    // there's no flash of the wrong theme while React loads.
+    (function () {
+      var stored = localStorage.getItem('recipe-box-theme') || '';
+      var mode = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', mode);
+    })();
+  </script>
+  <script type="module" crossorigin src="/recipe-box/assets/index-DSsA1cP7.js"></script>
+  <link rel="stylesheet" crossorigin href="/recipe-box/assets/index-Ddo3hHuS.css">
 <link rel="manifest" href="/recipe-box/manifest.webmanifest"></head>
 <body>
   <div id="root"></div>
